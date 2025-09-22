@@ -15,9 +15,27 @@ void Add_Note();
 void View_Note();
 int main()
 {
+int choice;
 
-    Add_Note();
-    View_Note();
+while(1)
+{
+    printf("Menu \n 1.Add note to the diary \n 2.View note from the diary\n 3.Exit:\n Enter Choice:");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1: Add_Note();
+            break;
+        case 2:
+                View_Note();
+            break;
+        case 3:
+                exit(0);
+            break;
+        default :
+                printf("Invalid Choice! \n");
+                
+    }
+}
     return 0;
 }
 #define DATA_FILE "Diary.txt"
